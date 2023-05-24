@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spacy-nlp-service
+spec:
+  selector:
+    app: spacy-nlp-service-application
+  type: ClusterIP
+  ports:
+    - name: http
+      port: 5000
+      targetPort: 5000
+      protocol: TCP
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spacy-nlp-service-application
+  labels:
+    app: spacy-nlp-service-application
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spacy-nlp-service-application
+  template:
+    metadata:
+      labels:
+        app: spacy-nlp-service-application
+      annotations:
+        rollme: {{ randAlphaNum 5 | quote }}
+    spec:
+      containers:
+        - name: spacy-nlp-service
+          image: ghcr.io/hackathon-x-mode/spacy-nlp-service:main
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 5000
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: common-service-envs
+      imagePullSecrets:
+        - name: regcred

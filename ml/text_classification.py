@@ -5,20 +5,22 @@ from spacy.training.example import Example
 
 
 class TextClassification:
-    def __init__(self, train_data: list):
+    def __init__(self, train_data: list, model: str):
         self.nlp = spacy.blank("ru")
         self.train_data = train_data
-        text_cat = self.nlp.add_pipe("textcat_multilabel")
+        self.model = model
+        text_cat = self.nlp.add_pipe(self.model)#"textcat_multilabel"
 
         for cat in list(self.train_data[0][1]["cats"].keys()):
             text_cat.add_label(cat)
+            print("Attach label for model: ", cat)
 
     def training(self):
         self.nlp.begin_training()
-        other_pipes = [pipe for pipe in self.nlp.pipe_names if pipe != 'textcat_multilabel']
+        other_pipes = [pipe for pipe in self.nlp.pipe_names if pipe != self.model]
         with self.nlp.disable_pipes(*other_pipes):
             sizes = compounding(1.0, 4.0, 1.001)
-            for epoch in range(10):
+            for epoch in range(9):
                 random.shuffle(self.train_data)
                 batches = minibatch(self.train_data, size=sizes)
                 losses = {}

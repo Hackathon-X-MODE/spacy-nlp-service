@@ -1,0 +1,14 @@
+{
+  "labels":[
+    "OTHER",
+    "PRODUCT_DESCRIPTION",
+    "GETTING_ORDER",
+    "NOTIFICATION",
+    "GOT_ORDER",
+    "POST_BOX",
+    "PRODUCT",
+    "PREPARE_ORDER",
+    "DELIVERY"
+  ],
+  "threshold":0.5
+}

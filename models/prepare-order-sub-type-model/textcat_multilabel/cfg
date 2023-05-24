@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "SELECT_POSTAMAT",
+    "SEARCH_POSTAMAT_AT_HOUSE",
+    "OTHER"
+  ],
+  "threshold":0.5
+}
