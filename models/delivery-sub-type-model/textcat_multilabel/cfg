@@ -1,0 +1,9 @@
+{
+  "labels":[
+    "COAST_DELIVERY",
+    "OTHER",
+    "DEADLINE",
+    "DELIVERY_GUY_REPORT"
+  ],
+  "threshold":0.5
+}

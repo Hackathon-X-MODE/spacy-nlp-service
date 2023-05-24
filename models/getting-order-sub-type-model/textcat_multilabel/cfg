@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "OTHER",
+    "PAY_ORDER",
+    "OPEN_POSTAMAT"
+  ],
+  "threshold":0.5
+}
