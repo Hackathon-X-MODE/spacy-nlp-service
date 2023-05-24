@@ -1,0 +1,9 @@
+{
+  "labels":[
+    "OTHER",
+    "CONFIRM_NOTIFICATION",
+    "DELIVERY_NOTIFICATION",
+    "READY_NOTIFICATION"
+  ],
+  "threshold":0.5
+}

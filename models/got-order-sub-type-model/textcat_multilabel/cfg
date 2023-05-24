@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "OTHER",
+    "PACKING",
+    "COMPLETENESS"
+  ],
+  "threshold":0.5
+}

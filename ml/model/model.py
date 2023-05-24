@@ -26,6 +26,12 @@ class BasicModel:
 MOOD_MODEL = 'MOOD'
 MAIN_TYPE_MODEL = 'MAIN_TYPE'
 PREPARE_ORDER_SUB_TYPE_MODEL = 'PREPARE_ORDER_SUB_TYPE'
+GETTING_ORDER_SUB_TYPE_MODEL = 'GETTING_ORDER_SUB_TYPE'
+GOT_ORDER_SUB_TYPE_MODEL = 'GOT_ORDER_SUB_TYPE'
+PRODUCT_SUB_TYPE_MODEL = 'PRODUCT_SUB_TYPE'
+POST_BOX_SUB_TYPE_MODEL = 'POST_BOX_SUB_TYPE'
+DELIVERY_SUB_TYPE_MODEL = 'DELIVERY_SUB_TYPE'
+NOTIFICATION_SUB_TYPE_MODEL = 'NOTIFICATION_SUB_TYPE'
 
 REF = {
     MOOD_MODEL: BasicModel(
@@ -36,5 +42,23 @@ REF = {
     ),
     PREPARE_ORDER_SUB_TYPE_MODEL: BasicModel(
         'models/prepare-order-sub-type-model', 'train_data/prepare-order-sub-type.json', 'textcat_multilabel'
+    ),
+    GETTING_ORDER_SUB_TYPE_MODEL: BasicModel(
+        'models/getting-order-sub-type-model', 'train_data/getting-order-sub-type.json', 'textcat_multilabel'
+    ),
+    GOT_ORDER_SUB_TYPE_MODEL: BasicModel(
+        'models/got-order-sub-type-model', 'train_data/got-order-sub-type.json', 'textcat_multilabel'
+    ),
+    PRODUCT_SUB_TYPE_MODEL: BasicModel(
+        'models/product-sub-type-model', 'train_data/product-sub-type.json', 'textcat_multilabel'
+    ),
+    POST_BOX_SUB_TYPE_MODEL: BasicModel(
+        'models/postbox-sub-type-model', 'train_data/postbox-sub-type.json', 'textcat_multilabel'
+    ),
+    DELIVERY_SUB_TYPE_MODEL: BasicModel(
+        'models/delivery-sub-type-model', 'train_data/delivery-sub-type.json', 'textcat_multilabel'
+    ),
+    NOTIFICATION_SUB_TYPE_MODEL: BasicModel(
+        'models/notification-sub-type-model', 'train_data/notification-sub-type.json', 'textcat_multilabel'
     ),
 }

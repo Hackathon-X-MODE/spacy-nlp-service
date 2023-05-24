@@ -1,0 +1,8 @@
+{
+  "labels":[
+    "OTHER",
+    "DESCRIPTION",
+    "QUALITY"
+  ],
+  "threshold":0.5
+}
